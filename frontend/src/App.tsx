@@ -12,22 +12,25 @@ const App: React.FC = () => {
   };
 
   const handlePredict = async () => {
-    try {
-      setLoading(true); // Set loading to true when starting prediction
-
-      // Make a POST request to the backend server with the user input
-      const response = await axios.post("http://localhost:5000/api/predict", {
-        text: inputText,
+    setLoading(true);
+    fetch("https://ml-fake-news-detector-backend.vercel.app/api/predict", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ text: inputText }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setPrediction(
+          data["This article is most likely"] === 1 ? "Fake News" : "True News"
+        );
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setLoading(false);
       });
-
-      // Update the prediction state with the result from the server
-      setPrediction(response.data.prediction === 1 ? "True News" : "Fake News");
-    } catch (error) {
-      console.error("Error:", error);
-      setPrediction("Error occurred while making the prediction.");
-    } finally {
-      setLoading(false); // Set loading to false after prediction completes
-    }
   };
 
   return (
