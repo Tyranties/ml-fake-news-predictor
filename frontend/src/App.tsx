@@ -60,8 +60,8 @@ const App: React.FC = () => {
       <footer>
         <p>
           Disclaimer: This website is for demonstration purposes only and the
-          predictions provided by the fake news detector may not be accurate. It
-          should not be used as a reliable source for detecting fake news in
+          predictions provided by the fake news predictor may not be accurate.
+          It should not be used as a reliable source for detecting fake news in
           real-world scenarios. Always verify information from credible sources
           before believing or sharing.
         </p>
