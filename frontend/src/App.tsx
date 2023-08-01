@@ -33,7 +33,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <main>
-        <h1>Fake News Detector</h1>
+        <h1>Fake News Predictor</h1>
         <div className="input-field">
           <input
             type="text"
