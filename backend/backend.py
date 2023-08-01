@@ -31,7 +31,7 @@ def predict():
         prediction = model.predict(vectorized_input)
 
         # Return the prediction as a JSON response
-        return jsonify({'This article is most likely': int(prediction[0])})
+        return jsonify({'Prediction': int(prediction[0])})
     except Exception as e:
         return jsonify({'error': str(e)})
 

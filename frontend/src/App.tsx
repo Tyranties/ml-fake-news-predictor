@@ -45,7 +45,7 @@ const App: React.FC = () => {
         </div>
 
         {loading ? (
-          <p>Loading...</p>
+          <p className="prediction">Loading...</p>
         ) : prediction ? (
           <p
             className={`prediction ${
