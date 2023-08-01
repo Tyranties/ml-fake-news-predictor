@@ -28,7 +28,7 @@ npm start
 This will launch the app at http://localhost:3000 in your web browser.
 
 ### Deployed Version
-The frontend of this application is deployed using Vercel and can be accessed at https://ml-fake-news-detector.vercel.app/.
+The frontend of this application is deployed using Vercel and can be accessed at https://ml-fake-news-predictor.vercel.app/.
 
 ## Backend
 The backend of the application is built using Python and Flask. It hosts a machine learning model trained to predict whether a news article title is fake or true.
