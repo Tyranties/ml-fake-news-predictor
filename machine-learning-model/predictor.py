@@ -15,7 +15,7 @@ def main():
 
         # Map the prediction to its label
         if prediction[0] == 1:
-            print("The title is likely true news.")
+            print("The title is likely real news.")
         else:
             print("The title is likely fake news.")
 

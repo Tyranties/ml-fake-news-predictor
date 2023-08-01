@@ -49,7 +49,7 @@ const App: React.FC = () => {
         ) : prediction ? (
           <p
             className={`prediction ${
-              prediction === "True News" ? "true" : "fake"
+              prediction === "Real News" ? "true" : "fake"
             }`}
           >
             Prediction: {prediction}
